@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from .models import Estilo, Ocasion, Outfit
 
 def index(request):
-    #return HttpResponse("Listado de outfits")
+	#outfits = get_list_or_404(Estilo.objects.order_by('nombre'))
+	#context = {'lista_outfits': outfits }
+    #return render(request, 'nocobot/index.html', context)
 	return render(request, 'nocobot/index.html')
+	
 	
