@@ -2,12 +2,14 @@
 
 {% block content %}
 <h1>{{ outfit.nombre }}</h1>
-<p><strong>Ocasión:</strong> {{ outfit.ocasión.nombre }}</p>
-<p><strong>Componentes:</strong> {{ outfit.componentes }}</p>
-<p><strong>Estilo:</strong> 
-    {% for estilo in outfit.estilo.all %}
-        {{ estilo.nombre }}{% if not forloop.last %}, {% endif %}
+<p><strong>Ocasión:</strong>
+    {% for ocasion in outfit.ocasion.all %}
+      {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
     {% endfor %}
+  </p>
+<p><strong>Componentes:</strong> {{ outfit.descripcion }}</p>
+<p><strong>Estilo:</strong> 
+    {{ outfit.estilo }}
 </p>
 <img src="{{ outfit.foto.url }}" alt="{{ outfit.nombre }}">
 {% endblock %}

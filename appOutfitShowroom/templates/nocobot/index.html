@@ -111,7 +111,7 @@
     <section id="introblocks">
       <ul class="nospace group btmspace-80">
         <li class="one_third first">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/348x400.png' %}" alt=""></a>
+          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¿Quiénes somos?</h6>
               <div>
@@ -121,7 +121,7 @@
           </figure>
         </li>
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/348x400.png' %}" alt=""></a>
+          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Nuestro propósito</h6>
               <div>
@@ -131,7 +131,7 @@
           </figure>
         </li>
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/348x400.png' %}" alt=""></a>
+          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¡Colabora con nosotras!</h6>
               <div>
@@ -166,47 +166,24 @@
       <p class="heading underline font-x2">Outfits de la semana</p>
     </div>
     <ul class="nospace group team">
-      <li class="one_quarter first">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
+      {% for outfit in outfits %}
+      <li class="one_quarter {% if forloop.first %}first{% endif %}">
+        <figure><a class="imgover" href="{% url 'detalle_outfit' outfit.id %}"> <img src="{{ outfit.Foto }}" alt="{{ outfit.nombre }}"></a>
           <figcaption><strong>1</strong> <em>Job Title Here</em></figcaption>
         </figure>
+        <figcaption>
+          <strong>{{ outfit.nombre }}</strong>
+          <p>Ocasiones: 
+            {% for ocasion in outfit.ocasion.all %}
+              {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </p>  <!-- o el campo que representa la ocasión -->
+          <p>{{ outfit.estilo }}</p>
+        </figcaption>
       </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>2</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>3</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>4</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter first">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>5</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>6</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>7</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-      <li class="one_quarter">
-        <figure><a class="imgover" href="#"><img src="images/demo/300x300.png" alt=""></a>
-          <figcaption><strong>8</strong> <em>Job Title Here</em></figcaption>
-        </figure>
-      </li>
-    </ul>
+      {% endfor %}
+      </ul>
+      
     <!-- ################################################################################################ -->
   </div>
 </div>

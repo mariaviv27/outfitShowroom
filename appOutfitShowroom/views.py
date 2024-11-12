@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from .models import Estilo, Ocasion, Outfit
 
 def index(request):
-    return render(request, 'nocobot/index.html')
+    outfits = Outfit.objects.all()[:8]  # Obtén solo los primeros 8 outfits
+    return render(request, 'nocobot/index.html', {'outfits': outfits})
 
 def lista_outfits(request):
     outfits = Outfit.objects.all()
