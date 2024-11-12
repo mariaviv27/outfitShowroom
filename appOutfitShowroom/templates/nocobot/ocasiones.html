@@ -1,0 +1,13 @@
+{% extends "nocobot/base1.html" %}
+
+{% block content %}
+<h1>Lista de Ocasiones</h1>
+<ul>
+    {% for ocasion in ocasiones %}
+    <li>
+        <a href="{% url 'detalle_ocasion' ocasion.id %}">{{ ocasion.nombre }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

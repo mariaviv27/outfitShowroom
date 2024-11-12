@@ -1,0 +1,12 @@
+{% extends "nocobot/base2.html" %}
+
+{% block content %}
+<h1>{{ estilo.nombre }}</h1>
+<p><strong>Definición:</strong> {{ estilo.definición }}</p>
+<h2>Outfits Asociados</h2>
+<ul>
+    {% for outfit in outfits %}
+    <li>{{ outfit.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

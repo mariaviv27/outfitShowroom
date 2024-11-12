@@ -1,0 +1,13 @@
+{% extends "nocobot/base1.html" %}
+
+{% block content %}
+<h1>Lista de Estilos</h1>
+<ul>
+    {% for estilo in estilos %}
+    <li>
+        <a href="{% url 'detalle_estilo' estilo.id %}">{{ estilo.nombre }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

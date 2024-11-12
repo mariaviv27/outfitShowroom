@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Outfit Showroom - Detalles</title>
+    <link rel="stylesheet" href="{% static 'layout/styles/framework.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/styles/layout.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Outfit Showroom</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'lista_outfits' %}">Outfits</a></li>
+                <li><a href="{% url 'lista_ocasiones' %}">Ocasiones</a></li>
+                <li><a href="{% url 'lista_estilos' %}">Estilos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Detalles</h2>
+        {% block content %} {% endblock %}
+    </main>
+
+    <footer>
+        <p>© Outfit Showroom 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
