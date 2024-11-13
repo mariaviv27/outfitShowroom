@@ -19,6 +19,8 @@ class Outfit(models.Model):
     descripcion = models.CharField(max_length=200)
     estilo = models.ForeignKey(Estilo, on_delete=models.CASCADE)
     ocasion = models.ManyToManyField(Ocasion)
-    foto = models.ImageField(upload_to='outfits/', null=True, blank=True)
+    foto = models.ImageField(upload_to='static/media/outfits/', null=True, blank=True)
+    #foto = models.URLField(max_length=200, blank=True, null=True)
+
     def __str__(self):
         return self.nombre
