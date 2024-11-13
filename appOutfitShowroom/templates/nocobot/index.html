@@ -51,18 +51,18 @@
     <header id="header" class="hoc clear">
       <div id="logo" class="fl_left"> 
         <!-- ################################################################################################ -->
-        <h1><a href="index.html">¡Bienvenidx!</a></h1>
+        <h1><a href="{% url 'index' %}">¡Bienvenidx!</a></h1>
         <!-- ################################################################################################ -->
       </div>
       <nav id="mainav" class="fl_right"> 
         <!-- ################################################################################################ -->
         <ul class="clear">
-          <li class="active"><a href="index.html">Inicio</a></li>
+          <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
           <li><a class="drop" href="#">Navegar</a>
             <ul>
               <!--ERKU: HAY QUE CAMBIAR EL HREF-->
-              <li><a href="pages/gallery.html">ESTILOS</a></li>
-              <li><a class="drop" href="#">OCASIONES</a>
+              <li><a href="{% url 'lista_estilos' %}">ESTILOS</a></li>
+              <li><a class="drop" href="{% url 'lista_ocasiones' %}">OCASIONES</a>
                 <ul>
                   <li><a href="#">Estaciones climáticas</a></li>
                   <li><a href="#">Entrevistas laborales</a></li>
@@ -73,7 +73,7 @@
                   <li><a href="#">Fiesta formal y galas</a></li>
                 </ul>
               </li>
-              <li><a href="pages/sidebar-left.html">OUTFITS</a></li>  
+              <li><a href="{% url 'lista_outfits' %}">OUTFITS</a></li>  
             </ul>
           </li>
 
