@@ -51,18 +51,18 @@
     <header id="header" class="hoc clear">
       <div id="logo" class="fl_left"> 
         <!-- ################################################################################################ -->
-        <h1><a href="index.html">¡Bienvenidx!</a></h1>
+        <h1><a href="{% url 'index' %}">¡Bienvenidx!</a></h1>
         <!-- ################################################################################################ -->
       </div>
       <nav id="mainav" class="fl_right"> 
         <!-- ################################################################################################ -->
         <ul class="clear">
-          <li class="active"><a href="index.html">Inicio</a></li>
+          <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
           <li><a class="drop" href="#">Navegar</a>
             <ul>
               <!--ERKU: HAY QUE CAMBIAR EL HREF-->
-              <li><a href="pages/gallery.html">ESTILOS</a></li>
-              <li><a class="drop" href="#">OCASIONES</a>
+              <li><a href="{% url 'lista_estilos' %}">ESTILOS</a></li>
+              <li><a class="drop" href="{% url 'lista_ocasiones' %}">OCASIONES</a>
                 <ul>
                   <li><a href="#">Estaciones climáticas</a></li>
                   <li><a href="#">Entrevistas laborales</a></li>
@@ -73,7 +73,7 @@
                   <li><a href="#">Fiesta formal y galas</a></li>
                 </ul>
               </li>
-              <li><a href="pages/sidebar-left.html">OUTFITS</a></li>  
+              <li><a href="{% url 'lista_outfits' %}">OUTFITS</a></li>  
             </ul>
           </li>
 
@@ -168,7 +168,13 @@
     <ul class="nospace group team">
       {% for outfit in outfits %}
       <li class="one_quarter {% if forloop.first %}first{% endif %}">
-        <figure><a class="imgover" href="{% url 'detalle_outfit' outfit.id %}"> <img src="{{ outfit.Foto }}" alt="{{ outfit.nombre }}"></a>
+        <figure><a class="imgover" href="#"> 
+          {% if outfit.foto %}
+          <img src="{{ outfit.foto.url }}" alt="{{ outfit.nombre }}">
+          
+        {% else %}
+          <img src="{% static '/media/outfits/Boho-Bodas.jpg' %}" alt="Imagen no disponible">
+        {% endif %}</a>
           <figcaption><strong>1</strong> <em>Job Title Here</em></figcaption>
         </figure>
         <figcaption>
