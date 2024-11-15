@@ -524,3 +524,85 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
 }
+
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+/* Resaltar enlaces en contenido */
+a {
+    color: #B946AD;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #161C21;
+    text-decoration: underline;
+}
+
+/* Separación entre elementos */
+.btmspace-20 {
+    margin-bottom: 20px;
+}
+
+/* Estilo para imágenes */
+img {
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablas */
+table {
+    border: 1px solid #D7D7D7;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #D7D7D7;
+}
+
+th {
+    background-color: #161C21;
+    color: #FFFFFF;
+}
+
+main {
+    width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+    margin: 40px auto; /* Centra horizontalmente y agrega espacio arriba y abajo */
+    padding: 20px; /* Espaciado interno */
+    background-color: #FFFFFF; /* Fondo blanco para el marco */
+    border: 1px solid #D7D7D7; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Títulos dentro del marco */
+main h1, main h2 {
+    text-align: center; /* Centrar títulos */
+    color: #161C21; /* Color del título */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Listas */
+main ul {
+    margin: 20px 0;
+    padding-left: 20px; /* Indentación */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 750px) {
+    main {
+        width: 95%;
+    }
+}

@@ -136,3 +136,70 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .inspace-15{padding:15px;}
 .inspace-20{padding:20px;}
 .inspace-30{padding:30px;}
+
+
+header {
+    background-color: #161C21; /* Color oscuro consistente con la paleta */
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Destacar el título */
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Separación entre enlaces */
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #B946AD; /* Color destacado */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+    background-color: #B946AD; /* Resaltado al pasar */
+    border-radius: 5px;
+}
+
+/* Ajustes para la sección principal */
+main {
+    padding: 40px 20px;
+    background-color: #F4F4F4; /* Fondo claro */
+    color: #474747;
+}
+
+main h1, main h2 {
+    color: #161C21; /* Títulos oscuros */
+    font-weight: bold;
+    text-align: center;
+}
+
+main ul {
+    list-style: square inside; /* Estilo para listas */
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #161C21; /* Fondo oscuro */
+    color: #A5A6AA; /* Texto gris claro */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
