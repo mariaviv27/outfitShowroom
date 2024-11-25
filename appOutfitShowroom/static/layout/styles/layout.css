@@ -81,6 +81,21 @@ File: Layout CSS
 #introblocks figure:hover figcaption div{max-height:1200px; transition-timing-function:cubic-bezier(0.5, 0, 1, 0); transition-delay:0s;}
 #introblocks figure figcaption .heading{padding:20px 0; font-size:1.2rem; font-weight:700; line-height:1;}
 #introblocks figure figcaption div p{padding:0 0 20px 0;}
+#introblocks ul {
+    display: flex; /* Activa el diseño flexible */
+    flex-wrap: wrap; /* Permite que los elementos salten a otra fila si no caben */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+#introblocks li {
+    flex: 1 1 calc(33.333% - 20px); /* Ocupa un tercio del ancho con margen */
+    box-sizing: border-box; /* Incluye márgenes y bordes dentro del ancho */
+    margin: 10px; /* Espaciado entre elementos */
+    text-align: center; /* Centrar contenido */
+}
 
 /* Image Group */
 .imgroup{}

@@ -4,7 +4,7 @@
 <head>
 <title>Pagina principal</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% load static %}
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
 </head>
@@ -111,7 +111,8 @@
     <section id="introblocks">
       <ul class="nospace group btmspace-80">
         <li class="one_third first">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
+          <figure>
+            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¿Quiénes somos?</h6>
               <div>
@@ -121,7 +122,8 @@
           </figure>
         </li>
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
+          <figure>
+            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Nuestro propósito</h6>
               <div>
@@ -131,7 +133,8 @@
           </figure>
         </li>
         <li class="one_third">
-          <figure><a class="imgover" href="#"><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
+          <figure>
+            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¡Colabora con nosotras!</h6>
               <div>
@@ -141,7 +144,7 @@
           </figure>
         </li>
       </ul>
-    </section>
+    </section>    
     <!-- ################################################################################################ -->
     <!--<hr class="btmspace-80">-->
     <!-- ################################################################################################ -->
@@ -168,28 +171,27 @@
     <ul class="nospace group team">
       {% for outfit in outfits %}
       <li class="one_quarter {% if forloop.first %}first{% endif %}">
-        <figure><a class="imgover" href="#"> 
-          {% if outfit.foto %}
-          <img src="{{ outfit.foto.url }}" alt="{{ outfit.nombre }}">
-          
-        {% else %}
-          <img src="{% static '/media/outfits/Boho-Bodas.jpg' %}" alt="Imagen no disponible">
-        {% endif %}</a>
-          <figcaption><strong>1</strong> <em>Job Title Here</em></figcaption>
+        <figure>
+          <a class="imgover" href="#"> 
+            {% if outfit.foto %}
+              <img src="{{ outfit.foto.url }}" alt="{{ outfit.nombre }}">
+            {% else %}
+              <img src="{% static '/media/outfits/Boho-Bodas.jpg' %}" alt="Imagen no disponible">
+            {% endif %}
+          </a>
+          <figcaption>
+            <strong>{{ outfit.nombre }}</strong>
+            <p>Ocasiones: 
+              {% for ocasion in outfit.ocasion.all %}
+                {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </p>
+            <p>{{ outfit.estilo }}</p>
+          </figcaption>
         </figure>
-        <figcaption>
-          <strong>{{ outfit.nombre }}</strong>
-          <p>Ocasiones: 
-            {% for ocasion in outfit.ocasion.all %}
-              {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
-            {% endfor %}
-          </p>  <!-- o el campo que representa la ocasión -->
-          <p>{{ outfit.estilo }}</p>
-        </figcaption>
       </li>
       {% endfor %}
-      </ul>
-      
+    </ul>
     <!-- ################################################################################################ -->
   </div>
 </div>
