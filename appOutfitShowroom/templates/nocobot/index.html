@@ -174,9 +174,7 @@
         <figure>
           <a class="imgover" href="#"> 
             {% if outfit.foto %}
-              <img src="{{ outfit.foto.url }}" alt="{{ outfit.nombre }}">
-            {% else %}
-              <img src="{% static '/media/outfits/Boho-Bodas.jpg' %}" alt="Imagen no disponible">
+              <img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}">
             {% endif %}
           </a>
           <figcaption>
