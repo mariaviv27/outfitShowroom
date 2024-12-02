@@ -45,6 +45,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  # Middleware para idiomas
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -105,6 +106,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
+LANGUAGES = [ 
+    ('en', 'English'),  # Inglés
+    ('es', 'Español'), # Español
+    ]  
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -126,3 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/appOutfitShowroom/media/'  # URL base para archivos de medios
 MEDIA_ROOT = os.path.join(BASE_DIR, 'appOutfitShowroom', 'media')
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/',  # Carpeta donde se guardarán los archivos de traducción
+]
