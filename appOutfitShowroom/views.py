@@ -4,11 +4,13 @@ from django.http import HttpResponse
 from .models import Estilo, Ocasion, Outfit
 
 def index(request):
+    #dame un outfit por estilo
     outfits = Outfit.objects.all()[:8]  # Obtén solo los primeros 8 outfits
     return render(request, 'nocobot/index.html', {'outfits': outfits})
 
 def lista_outfits(request):
     outfits = Outfit.objects.all()
+    #poner list 404
     return render(request, 'nocobot/outfits.html', {'outfits': outfits})
 
 # Vista para los detalles de un outfit
