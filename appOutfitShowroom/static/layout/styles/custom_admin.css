@@ -3,6 +3,10 @@
     color: white;
 }
 
+#header h1{
+    color:black;
+}
+
 .module h2, .module caption, .inline-group h2  {
     background: rgb(207, 118, 230);
 }
