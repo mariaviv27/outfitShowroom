@@ -63,22 +63,10 @@
             <ul>
               <!--ERKU: HAY QUE CAMBIAR EL HREF-->
               <li><a href="{% url 'lista_estilos' %}">ESTILOS</a></li>
-              <li><a class="drop" href="{% url 'lista_ocasiones' %}">OCASIONES</a>
-                <ul>
-                  <li><a href="#">Estaciones climáticas</a></li>
-                  <li><a href="#">Entrevistas laborales</a></li>
-                  <li><a href="#">Días de playa</a></li>
-                  <li><a href="#">Trabajo</a></li>
-                  <li><a href="#">Cena de negocios</a></li>
-                  <li><a href="#">Bodas</a></li>
-                  <li><a href="#">Fiesta formal y galas</a></li>
-                </ul>
-              </li>
+              <li><a href="{% url 'lista_ocasiones' %}">OCASIONES</a></li>
               <li><a href="{% url 'lista_outfits' %}">OUTFITS</a></li>  
             </ul>
           </li>
-
-          <li>
         </ul>
         <!-- ################################################################################################ -->
       </nav>
@@ -94,7 +82,7 @@
         <h3 class="heading">Outfit Showroom</h3>
         <p>¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la ocasión! </p>
         <!--ERKU: VER QUÉ HACER CON EL BOTÓN-->
-        <footer><a class="btn" href="#">Empezar</a></footer>
+        <footer><a class="btn" href="{% url 'lista_outfits' %}">Empezar</a></footer>
       </article>
       <!-- ################################################################################################ -->
     </div>
@@ -113,7 +101,7 @@
       <ul class="nospace group btmspace-80">
         <li class="one_third first">
           <figure>
-            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
+            <a><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¿Quiénes somos?</h6>
               <div>
@@ -124,7 +112,7 @@
         </li>
         <li class="one_third">
           <figure>
-            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
+            <a><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">Nuestro propósito</h6>
               <div>
@@ -135,7 +123,7 @@
         </li>
         <li class="one_third">
           <figure>
-            <a class="imgover" href="#"><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
+            <a><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
             <figcaption>
               <h6 class="heading">¡Colabora con nosotras!</h6>
               <div>
@@ -173,7 +161,7 @@
       {% for outfit in outfits %}
       <li class="one_quarter {% if forloop.first %}first{% endif %}">
         <figure>
-          <a class="imgover" href="#"> 
+          <a class="imgover" href="{% url 'detalle_outfit' outfit.id %}"> 
             {% if outfit.foto %}
               <img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}">
             {% endif %}
