@@ -13,6 +13,7 @@
 
 div.breadcrumbs {
     background: rgb(212, 172, 223);
+    color: black;
 }
 
 .button.default, input[type=submit].default, .submit-row input.default{
