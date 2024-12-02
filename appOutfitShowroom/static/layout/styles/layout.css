@@ -236,33 +236,92 @@ Delete it completely to stop fading
 
 /* Navigation
 --------------------------------------------------------------------------------------------------------------- */
-nav ul, nav ol{margin:0; padding:0; list-style:none;}
+nav ul, nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+/* Reglas para el estilo general de la navegación */
+#mainav, #breadcrumb, .sidebar nav {
+    line-height: normal;
+}
 
-/* Top Navigation */
-#mainav{}
-#mainav ul{text-transform:uppercase;}
-#mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
-#mainav ul ul ul{left:180px; top:0;}
-#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
-#mainav li:last-child{margin-right:0;}
-#mainav li li{width:100%; margin:0;}
-#mainav li a{display:block; padding:30px 0;}
-#mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px;}
-#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
-#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
-#mainav .drop::after{top:35px; left:5px;}
-#mainav li li .drop::after{top:15px; left:5px;}
-#mainav ul ul{visibility:hidden; opacity:0;}
-#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+/* Configuración para los íconos de los drop-downs (el triángulo que aparece al lado de los botones) */
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after {
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 10px;
+}
 
-#mainav form{display:none; width:100%; margin:0; padding:0;}
-#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
-#mainav form select{width:100%; padding:5px; border:none;}
-#mainav form select option{margin:5px; padding:0; border:none;}
+/* Estilo para el botón "Empezar" */
+#mainav li .btn {
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #B946AD; /* Color de fondo del botón */
+    color: white; /* Color de texto */
+    text-decoration: none; /* Elimina subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+}
+
+#mainav li .btn:hover {
+    background-color: #9A3F8E; /* Color del fondo al pasar el cursor */
+    cursor: pointer;
+}
+
+/* Estilo para el submenú de "Empezar" */
+#mainav li .drop + ul {
+    position: absolute;
+    top: 100%;  /* Aparece debajo del botón */
+    left: 0;
+    width: 200px; /* Ajusta el ancho según lo necesites */
+    display: none; /* Oculto por defecto */
+    background-color: #ffffff;  /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra para el submenú */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 0; /* Espaciado interno */
+}
+
+/* Mostrar submenú al pasar el cursor sobre "Empezar" */
+#mainav li:hover > .drop + ul {
+    display: block; /* Muestra el submenú al pasar el cursor */
+}
+
+/* Eliminar los puntos de la lista dentro del submenú */
+#mainav li .drop + ul li {
+    list-style: none; /* Elimina los puntos solo de esta lista */
+    width: 100%; /* Asegura que cada opción ocupe todo el ancho */
+    padding: 8px 16px; /* Espaciado de cada opción */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#mainav li .drop + ul li a {
+    display: block; /* Asegura que el enlace ocupe todo el ancho */
+    padding: 10px;
+    color: #161C21; /* Color de texto */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+#mainav li .drop + ul li a:hover {
+    background-color: #B946AD; /* Color de fondo al pasar el cursor */
+    color: white; /* Color del texto al pasar el cursor */
+}
+
+/* Para otras listas, mantenemos los puntos */
+#mainav ul li ul li a {
+    display: block;
+    padding: 10px;
+    color: #161C21;
+    text-decoration: none;
+}
+
+#mainav ul li ul li a:hover {
+    background-color: #B946AD;
+    color: white;
+}
 
 /* Breadcrumb */
 #breadcrumb{padding:150px 0 30px;}
