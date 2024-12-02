@@ -13,10 +13,10 @@
         <h1>Outfit Showroom</h1>
         <nav>
             <ul>
-                <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-                <li><a href="{% url 'lista_outfits' %}">Outfits</a></li>
-                <li><a href="{% url 'lista_ocasiones' %}">Ocasiones</a></li>
-                <li><a href="{% url 'lista_estilos' %}">Estilos</a></li>
+                <li class="active"><a href="{% url 'index' %}">{% trans "Inicio" %}</a></li>
+                <li><a href="{% url 'lista_outfits' %}">{% trans "Outfits" %}</a></li>
+                <li><a href="{% url 'lista_ocasiones' %}">{% trans "Ocasiones" %}</a></li>
+                <li><a href="{% url 'lista_estilos' %}">{% trans "Estilos" %}</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
     </main>
 
     <footer>
-        <p>© Outfit Showroom 2024. Todos los derechos reservados.</p>
+        <p>{% blocktrans %}© Outfit Showroom 2024. Todos los derechos reservados.{% endblocktrans %}</p>
     </footer>
 </body>
 </html>
