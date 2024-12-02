@@ -1,0 +1,6 @@
+:root {
+    --primary: #c80400;
+}
+.module {
+    border-color: var(--primary);
+}
