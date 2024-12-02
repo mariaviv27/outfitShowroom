@@ -27,5 +27,5 @@ urlpatterns = [
 
 admin.site.site_title = "Outfit Showroom site admin"
 admin.site.site_header = "Outfit Showroom administration"
-admin.site.index_title = "OutfitShowroom"
+admin.site.index_title = "OutfitShowroom administration"
 
