@@ -3,13 +3,13 @@
 
 {% block content %}
 <h1>{{ outfit.nombre }}</h1>
-<p><strong>Ocasión:</strong>
+<p><strong>{% trans "Ocasión:" %}</strong> 
     {% for ocasion in outfit.ocasion.all %}
       {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
     {% endfor %}
   </p>
-<p><strong>Componentes:</strong> {{ outfit.descripcion }}</p>
-<p><strong>Estilo:</strong> 
+<p><strong>{% trans "Componentes:" %}</strong> {{ outfit.descripcion }}</p> 
+<p><strong>{% trans "Estilo:" %}</strong> 
     {{ outfit.estilo }}
 </p>
 <img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}">

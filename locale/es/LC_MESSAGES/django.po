@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-02 13:27+0100\n"
+"POT-Creation-Date: 2024-12-02 16:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,155 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
+
 #: .\appOutfitShowroom\templates\nocobot\base1.html:16
+#: .\appOutfitShowroom\templates\nocobot\base2.html:16
+#: .\appOutfitShowroom\templates\nocobot\index.html:61
 msgid "Inicio"
 msgstr "Home"
 
 #: .\appOutfitShowroom\templates\nocobot\base1.html:17
+#: .\appOutfitShowroom\templates\nocobot\base2.html:17
 msgid "Outfits"
 msgstr "Outfits"
 
 #: .\appOutfitShowroom\templates\nocobot\base1.html:18
+#: .\appOutfitShowroom\templates\nocobot\base2.html:18
 msgid "Ocasiones"
 msgstr "Occasions"
 
 #: .\appOutfitShowroom\templates\nocobot\base1.html:19
+#: .\appOutfitShowroom\templates\nocobot\base2.html:19
 msgid "Estilos"
 msgstr "Styles"
 
 #: .\appOutfitShowroom\templates\nocobot\base1.html:29
+#: .\appOutfitShowroom\templates\nocobot\base2.html:30
 msgid "© Outfit Showroom 2024. Todos los derechos reservados."
 msgstr "© Outfit Showroom 2024. All rights reserved."
+
+#: .\appOutfitShowroom\templates\nocobot\base2.html:25
+msgid "Detalles"
+msgstr ""
+
+#: .\appOutfitShowroom\templates\nocobot\estilo.html:7
+#: .\appOutfitShowroom\templates\nocobot\ocasion.html:6
+msgid "Definición:"
+msgstr ""
+
+#: .\appOutfitShowroom\templates\nocobot\estilo.html:8
+msgid "Outfits asociados"
+msgstr ""
+
+#: .\appOutfitShowroom\templates\nocobot\estilos.html:6
+#, fuzzy
+#| msgid "Estilos"
+msgid "Lista de Estilos"
+msgstr "Styles"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:55
+msgid "¡Bienvenidx!"
+msgstr "Welcome"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:62
+msgid "Navegar"
+msgstr "Browse"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:65
+msgid "ESTILOS"
+msgstr "STYLES"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:66
+msgid "OCASIONES"
+msgstr "OCCASIONS"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:67
+msgid "OUTFITS"
+msgstr "OUTFITS"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:83
+msgid ""
+"¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la "
+"ocasión!"
+msgstr "Get inspired to create outfits of any style and always match the occasion!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:106
+msgid "¿Quiénes somos?"
+msgstr "Who are we?"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:108
+msgid "Somos un grupo de 3 universitarias apasionadas por la moda."
+msgstr "We are a group of 3 university students passionate about fashion."
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:117
+msgid "Nuestro propósito"
+msgstr "Our purpose"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:119
+msgid ""
+"Queremos proporcionar inspiración para aquellas personas que quieren "
+"disfrutar de la moda y de divertirse con ella."
+msgstr "We want to provide inspiration for those people who want to enjoy fashion and have fun with it."
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:128
+msgid "¡Colabora con nosotras!"
+msgstr "Collaborate with us!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:130
+msgid ""
+"Buscamos a personas que quieran compartir fotos de sus outfits con nuestra "
+"comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el "
+"mundo, ¡mándanos fotos de tus outfits al mail!"
+msgstr "We are looking for people who want to share photos of their outfits with our community. If you like fashion, and want to share your creativity with the world, send us photos of your outfits by email!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:157
+msgid "¡Los favoritos de nuestros usuarios!"
+msgstr "Our users' favorites!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:158
+msgid "Outfits de la semana"
+msgstr "Outfits of the week"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:171
+#, fuzzy
+#| msgid "Ocasiones"
+msgid "Ocasiones: "
+msgstr "Occasions"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:238
+msgid "Mándanos tus dudas"
+msgstr "Send us your questions"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:245
+msgid "Enviar"
+msgstr "Send"
+
+#: .\appOutfitShowroom\templates\nocobot\ocasion.html:7
+msgid "Outfits Asociados"
+msgstr "Associated Outfits"
+
+#: .\appOutfitShowroom\templates\nocobot\ocasiones.html:5
+#, fuzzy
+#| msgid "Ocasiones"
+msgid "Lista de Ocasiones"
+msgstr "Occasions"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:6
+#, fuzzy
+#| msgid "Ocasiones"
+msgid "Ocasión:"
+msgstr "Occasions"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:11
+msgid "Componentes:"
+msgstr "Components:"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:12
+#, fuzzy
+#| msgid "Estilos"
+msgid "Estilo:"
+msgstr "Styles"
+
+#: .\appOutfitShowroom\templates\nocobot\outfits.html:5
+msgid "Lista de Outfits:"
+msgstr "Outfit List:"
