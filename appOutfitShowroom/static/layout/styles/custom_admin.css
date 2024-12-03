@@ -1,0 +1,24 @@
+#header {
+    background: rgb(207, 118, 230);
+    color: white;
+}
+
+#header h1{
+    color:black;
+}
+
+.module h2, .module caption, .inline-group h2  {
+    background: rgb(207, 118, 230);
+}
+
+div.breadcrumbs {
+    background: rgb(212, 172, 223);
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+    background: rgb(71, 12, 88);
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+    background: rgb(71, 12, 88);;
+}

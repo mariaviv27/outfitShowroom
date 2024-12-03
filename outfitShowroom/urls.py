@@ -25,5 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-#if settings.DEBUG:
-#    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+admin.site.site_title = "Outfit Showroom site admin"
+admin.site.site_header = "Outfit Showroom administration"
+admin.site.index_title = "OutfitShowroom administration"
+

@@ -5,11 +5,18 @@ from .models import Estilo, Ocasion, Outfit
 
 def index(request):
     #dame un outfit por estilo
-    outfits = Outfit.objects.all()[:8]  # Obtén solo los primeros 8 outfits
+    outfits = Outfit.objects.raw('''
+        SELECT * FROM (
+            SELECT * FROM appOutfitShowroom_Outfit 
+            ORDER BY nombre ASC  -- Orden alfabético
+        ) AS subquery
+        GROUP BY estilo_id  -- Agrupamos por estilo para obtener solo un outfit por estilo
+    ''')
+#    outfits = Outfit.objects.all()[:8]  # Obtén solo los primeros 8 outfits
     return render(request, 'nocobot/index.html', {'outfits': outfits})
 
 def lista_outfits(request):
-    outfits = Outfit.objects.all()
+    outfits = get_list_or_404(Outfit.objects.all())
     #poner list 404
     return render(request, 'nocobot/outfits.html', {'outfits': outfits})
 
@@ -20,7 +27,7 @@ def detalle_outfit(request, outfit_id):
 
 # Vista para la lista de ocasiones
 def lista_ocasiones(request):
-    ocasiones = Ocasion.objects.all()
+    ocasiones = get_list_or_404(Ocasion.objects.all())
     return render(request, 'nocobot/ocasiones.html', {'ocasiones': ocasiones})
 
 # Vista para los detalles de una ocasión
@@ -31,7 +38,7 @@ def detalle_ocasion(request, ocasion_id):
 
 # Vista para la lista de estilos
 def lista_estilos(request):
-    estilos = Estilo.objects.all()
+    estilos = get_list_or_404(Estilo.objects.all())
     return render(request, 'nocobot/estilos.html', {'estilos': estilos})
 
 # Vista para los detalles de un estilo
