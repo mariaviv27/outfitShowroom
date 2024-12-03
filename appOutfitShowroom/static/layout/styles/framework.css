@@ -205,16 +205,16 @@ footer p {
 }
 
 
-/*
+
 .nospace.group.team {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Espacio entre los elementos 
+    justify-content: space-between; /* Espacio entre los elementos */
 }
 
 .nospace.group.team li {
-    flex: 0 0 23%; /* Cada elemento ocupa aproximadamente el 23% del ancho 
-    margin-bottom: 20px; /* Espaciado entre filas 
+    flex: 0 0 23%; /* Cada elemento ocupa aproximadamente el 23% del ancho */
+    margin-bottom: 20px; /* Espaciado entre filas */
     list-style: none;
 }
 
@@ -223,4 +223,4 @@ footer p {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-}*/
+}
