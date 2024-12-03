@@ -47,26 +47,24 @@ msgstr "© Outfit Showroom 2024. All rights reserved."
 
 #: .\appOutfitShowroom\templates\nocobot\base2.html:25
 msgid "Detalles"
-msgstr ""
+msgstr "Details"
 
 #: .\appOutfitShowroom\templates\nocobot\estilo.html:7
 #: .\appOutfitShowroom\templates\nocobot\ocasion.html:6
 msgid "Definición:"
-msgstr ""
+msgstr "Definition:"
 
 #: .\appOutfitShowroom\templates\nocobot\estilo.html:8
 msgid "Outfits asociados"
-msgstr ""
+msgstr "Associated outfits"
 
 #: .\appOutfitShowroom\templates\nocobot\estilos.html:6
-#, fuzzy
-#| msgid "Estilos"
 msgid "Lista de Estilos"
-msgstr "Styles"
+msgstr "List of Styles"
 
 #: .\appOutfitShowroom\templates\nocobot\index.html:55
 msgid "¡Bienvenidx!"
-msgstr "Welcome"
+msgstr "Welcome!"
 
 #: .\appOutfitShowroom\templates\nocobot\index.html:62
 msgid "Navegar"
@@ -117,7 +115,8 @@ msgid ""
 "Buscamos a personas que quieran compartir fotos de sus outfits con nuestra "
 "comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el "
 "mundo, ¡mándanos fotos de tus outfits al mail!"
-msgstr "We are looking for people who want to share photos of their outfits with our community. If you like fashion, and want to share your creativity with the world, send us photos of your outfits by email!"
+msgstr ""
+"We are looking for people who want to share photos of their outfits with our community. If you like fashion, and want to share your " "creativity with the world, send us photos of your outfits by email!"
 
 #: .\appOutfitShowroom\templates\nocobot\index.html:157
 msgid "¡Los favoritos de nuestros usuarios!"
@@ -128,10 +127,8 @@ msgid "Outfits de la semana"
 msgstr "Outfits of the week"
 
 #: .\appOutfitShowroom\templates\nocobot\index.html:171
-#, fuzzy
-#| msgid "Ocasiones"
 msgid "Ocasiones: "
-msgstr "Occasions"
+msgstr "Occasions: "
 
 #: .\appOutfitShowroom\templates\nocobot\index.html:238
 msgid "Mándanos tus dudas"
@@ -146,26 +143,20 @@ msgid "Outfits Asociados"
 msgstr "Associated Outfits"
 
 #: .\appOutfitShowroom\templates\nocobot\ocasiones.html:5
-#, fuzzy
-#| msgid "Ocasiones"
 msgid "Lista de Ocasiones"
-msgstr "Occasions"
+msgstr "List of Occasions"
 
 #: .\appOutfitShowroom\templates\nocobot\outfit.html:6
-#, fuzzy
-#| msgid "Ocasiones"
 msgid "Ocasión:"
-msgstr "Occasions"
+msgstr "Occasion:"
 
 #: .\appOutfitShowroom\templates\nocobot\outfit.html:11
 msgid "Componentes:"
 msgstr "Components:"
 
 #: .\appOutfitShowroom\templates\nocobot\outfit.html:12
-#, fuzzy
-#| msgid "Estilos"
 msgid "Estilo:"
-msgstr "Styles"
+msgstr "Style:"
 
 #: .\appOutfitShowroom\templates\nocobot\outfits.html:5
 msgid "Lista de Outfits:"
