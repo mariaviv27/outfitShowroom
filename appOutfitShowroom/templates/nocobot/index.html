@@ -52,19 +52,19 @@
     <header id="header" class="hoc clear">
       <div id="logo" class="fl_left"> 
         <!-- ################################################################################################ -->
-        <h1><a href="{% url 'index' %}">¡Bienvenidx!</a></h1>
+        <h1><a href="{% url 'index' %}"></a>{% trans "¡Bienvenidx!" %}</h1> 
         <!-- ################################################################################################ -->
       </div>
       <nav id="mainav" class="fl_right"> 
         <!-- ################################################################################################ -->
         <ul class="clear">
-          <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
-          <li><a class="drop" href="#">Navegar</a>
+          <li class="active"><a href="{% url 'index' %}">{% trans "Inicio" %}</a></li>
+          <li><a class="drop" href="#">{% trans "Navegar" %}</a>
             <ul>
               <!--ERKU: HAY QUE CAMBIAR EL HREF-->
-              <li><a href="{% url 'lista_estilos' %}">ESTILOS</a></li>
-              <li><a href="{% url 'lista_ocasiones' %}">OCASIONES</a></li>
-              <li><a href="{% url 'lista_outfits' %}">OUTFITS</a></li>  
+              <li><a href="{% url 'lista_estilos' %}">{% trans "ESTILOS" %}</a></li>
+              <li><a href="{% url 'lista_ocasiones' %}">{% trans "OCASIONES" %}</a></li>
+              <li><a href="{% url 'lista_outfits' %}">{% trans "OUTFITS" %}</a></li>  
             </ul>
           </li>
         </ul>
@@ -80,7 +80,7 @@
       <!-- ################################################################################################ -->
       <article>
         <h3 class="heading">Outfit Showroom</h3>
-        <p>¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la ocasión! </p>
+        <p> {% trans "¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la ocasión!" %}</p>
         <!--ERKU: VER QUÉ HACER CON EL BOTÓN-->
         <footer><a class="btn" href="{% url 'lista_outfits' %}">Empezar</a></footer>
       </article>
@@ -103,9 +103,9 @@
           <figure>
             <a><img src="{% static 'layout/images/demo/quienessomos.png' %}" alt=""></a>
             <figcaption>
-              <h6 class="heading">¿Quiénes somos?</h6>
+              <h6 class="heading">{% trans "¿Quiénes somos?" %}</h6>  
               <div>
-                <p>Somos un grupo de 3 universitarias apasionadas por la moda.</p>
+                <p>{% trans "Somos un grupo de 3 universitarias apasionadas por la moda." %}</p> 
               </div>
             </figcaption>
           </figure>
@@ -114,9 +114,9 @@
           <figure>
             <a><img src="{% static 'layout/images/demo/vestidor.png' %}" alt=""></a>
             <figcaption>
-              <h6 class="heading">Nuestro propósito</h6>
+              <h6 class="heading">{% trans "Nuestro propósito" %}</h6> 
               <div>
-                <p>Queremos proporcionar inspiración para aquellas personas que quieren disfrutar de la moda y de divertirse con ella.</p>
+                <p>{% trans "Queremos proporcionar inspiración para aquellas personas que quieren disfrutar de la moda y de divertirse con ella." %}</p>
               </div>
             </figcaption>
           </figure>
@@ -125,9 +125,9 @@
           <figure>
             <a><img src="{% static 'layout/images/demo/contactanos.png' %}" alt=""></a>
             <figcaption>
-              <h6 class="heading">¡Colabora con nosotras!</h6>
+              <h6 class="heading">{% trans "¡Colabora con nosotras!" %}</h6> 
               <div>
-                <p>Buscamos a personas que quieran compartir fotos de sus outfits con nuestra comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el mundo, ¡mándanos fotos de tus outfits al mail!</p>
+                <p>{% trans "Buscamos a personas que quieran compartir fotos de sus outfits con nuestra comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el mundo, ¡mándanos fotos de tus outfits al mail!" %}</p>                
               </div>
             </figcaption>
           </figure>
@@ -154,8 +154,8 @@
   <div class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <p class="nospace font-xs">¡Los favoritos de nuestros usuarios!</p>
-      <p class="heading underline font-x2">Outfits de la semana</p>
+      <p class="nospace font-xs">{% trans "¡Los favoritos de nuestros usuarios!" %}</p> 
+      <p class="heading underline font-x2">{% trans "Outfits de la semana" %}</p> 
     </div>
     <ul class="nospace group team">
       {% for outfit in outfits %}
@@ -168,7 +168,7 @@
           </a>
           <figcaption>
             <strong>{{ outfit.nombre }}</strong>
-            <p>Ocasiones: 
+            <p>{% trans "Ocasiones: " %}
               {% for ocasion in outfit.ocasion.all %}
                 {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
               {% endfor %}
@@ -235,14 +235,14 @@
       </ul>
     </div>
     <div class="one_quarter">
-      <h6 class="heading">Mándanos tus dudas</h6>
+      <h6 class="heading">{% trans "Mándanos tus dudas" %}</h6>  
       <p class="nospace btmspace-15">Pede ullamcorper facilisis bibendum nulla elit gravida elit vel suscipit urna.</p>
       <form action="#" method="post">
         <fieldset>
           <legend>Newsletter:</legend>
           <input class="btmspace-15" type="text" value="" placeholder="Email">
           <input class="btmspace-15" type="text" value="" placeholder="Esribe aquí">
-          <button type="submit" value="submit">Enviar</button>
+          <button type="submit" value="submit">{% trans "Enviar" %}</button>  
         </fieldset>
       </form>
     </div>
