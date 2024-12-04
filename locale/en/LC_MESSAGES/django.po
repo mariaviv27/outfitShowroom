@@ -1,0 +1,68 @@
+#: .\appOutfitShowroom\templates\nocobot\index.html:133
+msgid "Nuestro propósito"
+msgstr "Our purpose"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:135
+msgid ""
+"Queremos proporcionar inspiración para aquellas personas que quieren "
+"disfrutar de la moda y de divertirse con ella."
+msgstr ""
+"We want to provide inspiration for people who want to enjoy fashion and have fun with it."
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:144
+msgid "¡Colabora con nosotras!"
+msgstr "Collaborate with us!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:146
+msgid ""
+"Buscamos a personas que quieran compartir fotos de sus outfits con nuestra "
+"comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el "
+"mundo, ¡mándanos fotos de tus outfits al mail!"
+msgstr ""
+"We are looking for people who want to share photos of their outfits with our "
+"community. If you like fashion and want to share your creativity with the "
+"world, send us photos of your outfits via email!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:173
+msgid "¡Los favoritos de nuestros usuarios!"
+msgstr "Our users' favorites!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:174
+msgid "Outfits de la semana"
+msgstr "Outfits of the week"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:187
+msgid "Ocasiones: "
+msgstr "Occasions:"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:254
+msgid "Mándanos tus dudas"
+msgstr "Send us your questions"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:261
+msgid "Enviar"
+msgstr "Send"
+
+#: .\appOutfitShowroom\templates\nocobot\ocasion.html:7
+msgid "Outfits Asociados"
+msgstr "Associated outfits"
+
+#: .\appOutfitShowroom\templates\nocobot\ocasiones.html:5
+msgid "Lista de Ocasiones"
+msgstr "List of Occasions"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:6
+msgid "Ocasión:"
+msgstr "Occasion:"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:11
+msgid "Componentes:"
+msgstr "Components:"
+
+#: .\appOutfitShowroom\templates\nocobot\outfit.html:12
+msgid "Estilo:"
+msgstr "Style:"
+
+#: .\appOutfitShowroom\templates\nocobot\outfits.html:5
+msgid "Lista de Outfits:"
+msgstr "List of Outfits:"

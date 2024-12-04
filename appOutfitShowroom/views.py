@@ -47,3 +47,4 @@ def detalle_estilo(request, estilo_id):
     outfits = estilo.outfit_set.all()
     return render(request, 'nocobot/estilo.html', {'estilo': estilo, 'outfits': outfits})
 
+

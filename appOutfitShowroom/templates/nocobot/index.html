@@ -70,6 +70,25 @@
         </ul>
         <!-- ################################################################################################ -->
       </nav>
+
+      <!--Formulario de cambio de idioma-->
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <label for="language">{% trans "Seleccione su idioma" %}</label>
+        <select id="language" name="language">
+            <option value="es" {% if LANGUAGE_CODE == 'es' %}selected{% endif %}>Español</option>
+            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+        </select>
+        <button type="submit">{% trans "Cambiar idioma" %}</button>
+      </form>
+    
+    
+    <script>
+        function submitForm() {
+            document.querySelector('form').submit();
+        }
+    </script>
+     
     </header>
   </div>
   <!-- ################################################################################################ -->
@@ -82,7 +101,7 @@
         <h3 class="heading">Outfit Showroom</h3>
         <p> {% trans "¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la ocasión!" %}</p>
         <!--ERKU: VER QUÉ HACER CON EL BOTÓN-->
-        <footer><a class="btn" href="{% url 'lista_outfits' %}">Empezar</a></footer>
+        <footer><a class="btn" href="{% url 'lista_outfits' %}">{% trans "Empezar" %}</a></footer>
       </article>
       <!-- ################################################################################################ -->
     </div>

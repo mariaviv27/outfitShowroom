@@ -52,6 +52,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
 ROOT_URLCONF = 'outfitShowroom.urls'
 
 TEMPLATES = [
@@ -112,7 +116,7 @@ LANGUAGES = [
     ]  
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 

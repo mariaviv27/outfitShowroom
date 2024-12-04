@@ -19,10 +19,26 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
+from django.urls import path, include
+from django.utils.translation import gettext_lazy as _
+from django.conf import settings
+from django.conf.urls.i18n import set_language
+from django.conf.urls.i18n import i18n_patterns
+
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('appOutfitShowroom.urls')),
     path('admin/', admin.site.urls),
+]
+
+urlpatterns += i18n_patterns(
+    path('', include('appOutfitShowroom.urls')),  # Ajusta esto a tus URLs principales
+)
+
+urlpatterns += [
+    path('', include('appOutfitShowroom.urls')),
 ]
 
 admin.site.site_title = "Outfit Showroom site admin"
