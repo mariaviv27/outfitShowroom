@@ -1,12 +1,13 @@
+{% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{% get_current_language as LANGUAGE_CODE%}">
 
 <head>
 <title>Pagina principal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% load static %}
-{% load i18n %}
 <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
@@ -24,6 +25,20 @@
     <div class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="nospace">
+        <li>
+          <form method="post" action="{% url 'set_language' %}">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="en">
+            <button type="submit" class="english-btn">English</button>
+          </form>
+        </li>
+        <li>
+          <form method="post" action="{% url 'set_language' %}">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="es">
+            <button type="submit" class="spanish-btn">Español</button>
+          </form>  
+        </li>
         <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
         <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
         <li id="searchform">
@@ -54,6 +69,7 @@
         <!-- ################################################################################################ -->
         <h1><a href="{% url 'index' %}"></a>{% trans "¡Bienvenidx!" %}</h1> 
         <!-- ################################################################################################ -->
+      
       </div>
       <nav id="mainav" class="fl_right"> 
         <!-- ################################################################################################ -->
@@ -70,17 +86,6 @@
         </ul>
         <!-- ################################################################################################ -->
       </nav>
-
-      <!--Formulario de cambio de idioma-->
-      <form action="{% url 'set_language' %}" method="post">
-        {% csrf_token %}
-        <label for="language">{% trans "Seleccione su idioma" %}</label>
-        <select id="language" name="language">
-            <option value="es" {% if LANGUAGE_CODE == 'es' %}selected{% endif %}>Español</option>
-            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-        </select>
-        <button type="submit">{% trans "Cambiar idioma" %}</button>
-      </form>
     
     
     <script>
@@ -221,10 +226,10 @@
     <!-- ################################################################################################ -->
     <ul class="nospace clear">
       <li class="one_quarter first">
-        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Llámanos:</strong> +34 671108588</span></div>
+        <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>{% trans "Llámanos:" %}</strong> +34 671108588</span></div>
       </li>
       <li class="one_quarter">
-        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Envíanos un mail:</strong> soporte@outfitshowroom.com</span></div>
+        <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>{% trans "Envíanos un mail:" %}</strong> soporte@outfitshowroom.com</span></div>
       </li>
       <!--
       <li class="one_quarter">

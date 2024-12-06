@@ -16,30 +16,32 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from django.urls import include
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
-from django.conf.urls.i18n import i18n_patterns
-from django.urls import path, include
-from django.utils.translation import gettext_lazy as _
-from django.conf import settings
-from django.conf.urls.i18n import set_language
-from django.conf.urls.i18n import i18n_patterns
+from django.views.i18n import set_language
+
+
+
+
 
 
 urlpatterns = [
-    path('i18n/', include('django.conf.urls.i18n')),
-    path('', include('appOutfitShowroom.urls')),
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),  # Asegúrate de que esto esté presente
+    path('set_language/', set_language, name='set_language'),  # Ruta para cambiar el idioma
 ]
 
 urlpatterns += i18n_patterns(
-    path('', include('appOutfitShowroom.urls')),  # Ajusta esto a tus URLs principales
+    path('', include("appOutfitShowroom.urls")),
 )
 
-urlpatterns += [
-    path('', include('appOutfitShowroom.urls')),
-]
+# Configuración para archivos estáticos y media
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 admin.site.site_title = "Outfit Showroom site admin"
 admin.site.site_header = "Outfit Showroom administration"

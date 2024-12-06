@@ -1,45 +1,150 @@
-#: .\appOutfitShowroom\templates\nocobot\index.html:133
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-06 09:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\appOutfitShowroom\templates\nocobot\base1.html:17
+#: .\appOutfitShowroom\templates\nocobot\base2.html:17
+#: .\appOutfitShowroom\templates\nocobot\index.html:62
+msgid "Inicio"
+msgstr "Home"
+
+#: .\appOutfitShowroom\templates\nocobot\base1.html:18
+#: .\appOutfitShowroom\templates\nocobot\base2.html:18
+msgid "Outfits"
+msgstr "Outfits"
+
+#: .\appOutfitShowroom\templates\nocobot\base1.html:19
+#: .\appOutfitShowroom\templates\nocobot\base2.html:19
+msgid "Ocasiones"
+msgstr "Occasions"
+
+#: .\appOutfitShowroom\templates\nocobot\base1.html:20
+#: .\appOutfitShowroom\templates\nocobot\base2.html:20
+msgid "Estilos"
+msgstr "Styles"
+
+#: .\appOutfitShowroom\templates\nocobot\base1.html:30
+#: .\appOutfitShowroom\templates\nocobot\base2.html:31
+msgid "© Outfit Showroom 2024. Todos los derechos reservados."
+msgstr "© Outfit Showroom 2024. All rights reserved."
+
+#: .\appOutfitShowroom\templates\nocobot\base2.html:26
+msgid "Detalles"
+msgstr "Details"
+
+#: .\appOutfitShowroom\templates\nocobot\estilo.html:7
+#: .\appOutfitShowroom\templates\nocobot\ocasion.html:6
+msgid "Definición:"
+msgstr "Definition:"
+
+#: .\appOutfitShowroom\templates\nocobot\estilo.html:8
+msgid "Outfits asociados"
+msgstr "Associated outfits"
+
+#: .\appOutfitShowroom\templates\nocobot\estilos.html:6
+msgid "Lista de Estilos"
+msgstr "Styles list"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:56
+msgid "¡Bienvenidx!"
+msgstr "Welcome!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:63
+msgid "Navegar"
+msgstr "Browse"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:66
+msgid "ESTILOS"
+msgstr "STYLES"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:67
+msgid "OCASIONES"
+msgstr "OCCASIONS"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:68
+msgid "OUTFITS"
+msgstr "OUTFITS"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:92
+msgid ""
+"¡Inspírate para crear outfits de cualquier estilo e ir siempre acorde con la "
+"ocasión!"
+msgstr "Get inspired to create outfits for any style and always match the occasion!"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:94
+msgid "Empezar"
+msgstr "Get started"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:115
+msgid "¿Quiénes somos?"
+msgstr "Who are we?"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:117
+msgid "Somos un grupo de 3 universitarias apasionadas por la moda."
+msgstr "We are a group of three university students passionate about fashion."
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:126
 msgid "Nuestro propósito"
 msgstr "Our purpose"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:135
+#: .\appOutfitShowroom\templates\nocobot\index.html:128
 msgid ""
 "Queremos proporcionar inspiración para aquellas personas que quieren "
 "disfrutar de la moda y de divertirse con ella."
-msgstr ""
-"We want to provide inspiration for people who want to enjoy fashion and have fun with it."
+msgstr "We aim to inspire people who want to enjoy fashion and have fun with it."
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:144
+#: .\appOutfitShowroom\templates\nocobot\index.html:137
 msgid "¡Colabora con nosotras!"
 msgstr "Collaborate with us!"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:146
+#: .\appOutfitShowroom\templates\nocobot\index.html:139
 msgid ""
 "Buscamos a personas que quieran compartir fotos de sus outfits con nuestra "
 "comunidad. Si te gusta la moda, y quieres compartir tu creatividad con el "
 "mundo, ¡mándanos fotos de tus outfits al mail!"
-msgstr ""
-"We are looking for people who want to share photos of their outfits with our "
-"community. If you like fashion and want to share your creativity with the "
-"world, send us photos of your outfits via email!"
+msgstr "We are looking for people who want to share photos of their outfits with our community. If you love fashion and want to share your creativity with the world, send us your outfit photos via email!"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:173
+#: .\appOutfitShowroom\templates\nocobot\index.html:166
 msgid "¡Los favoritos de nuestros usuarios!"
 msgstr "Our users' favorites!"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:174
+#: .\appOutfitShowroom\templates\nocobot\index.html:167
 msgid "Outfits de la semana"
 msgstr "Outfits of the week"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:187
+#: .\appOutfitShowroom\templates\nocobot\index.html:180
 msgid "Ocasiones: "
 msgstr "Occasions:"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:254
+#: .\appOutfitShowroom\templates\nocobot\index.html:214
+msgid "Llámanos:"
+msgstr "Call us:"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:217
+msgid "Envíanos un mail:"
+msgstr "Send us an email:"
+
+#: .\appOutfitShowroom\templates\nocobot\index.html:247
 msgid "Mándanos tus dudas"
 msgstr "Send us your questions"
 
-#: .\appOutfitShowroom\templates\nocobot\index.html:261
+#: .\appOutfitShowroom\templates\nocobot\index.html:254
 msgid "Enviar"
 msgstr "Send"
 
@@ -49,7 +154,7 @@ msgstr "Associated outfits"
 
 #: .\appOutfitShowroom\templates\nocobot\ocasiones.html:5
 msgid "Lista de Ocasiones"
-msgstr "List of Occasions"
+msgstr "Occasions list"
 
 #: .\appOutfitShowroom\templates\nocobot\outfit.html:6
 msgid "Ocasión:"
@@ -65,4 +170,4 @@ msgstr "Style:"
 
 #: .\appOutfitShowroom\templates\nocobot\outfits.html:5
 msgid "Lista de Outfits:"
-msgstr "List of Outfits:"
+msgstr "Outfits list:"
