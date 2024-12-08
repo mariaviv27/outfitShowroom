@@ -5,12 +5,50 @@
 <h1>{{ outfit.nombre }}</h1>
 <p><strong>{% trans "Ocasión:" %}</strong> 
     {% for ocasion in outfit.ocasion.all %}
-      {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
+        {{ ocasion.nombre }}{% if not forloop.last %}, {% endif %}
     {% endfor %}
-  </p>
+</p>
 <p><strong>{% trans "Componentes:" %}</strong> {{ outfit.descripcion }}</p> 
 <p><strong>{% trans "Estilo:" %}</strong> 
     {{ outfit.estilo }}
 </p>
 <img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}">
+
+<!-- Sección de comentarios con scroll -->
+<div class="comments-section">
+  <h2>{% trans "Comentarios:" %}</h2>
+  <div class="comments-box">
+      {% for comentario in comentarios %}
+      <div class="comment-box">
+          <p><strong>{{ comentario.nombre }}</strong> - {{ comentario.puntuacion }}/5</p>
+          <p>{{ comentario.texto }}</p>
+          <p class="comment-date">{{ comentario.fecha_creacion }}</p>
+      </div>
+      {% empty %}
+      <p>{% trans "No hay comentarios aún." %}</p>
+      {% endfor %}
+  </div>
+</div>
+
+<!-- Formulario para añadir comentarios -->
+<div class="comment-form">
+    <h2>{% trans "Añadir Un Comentario:" %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre">{% trans "Nombre:" %}</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="puntuacion">{% trans "Puntuación:" %}</label>
+        <select id="puntuacion" name="puntuacion">
+            {% for i in "12345" %}
+            <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="texto">{% trans "Comentario (opcional):" %}</label>
+        <textarea id="texto" name="texto" rows="3"></textarea>
+
+        <button type="submit">{% trans "Enviar comentario" %}</button>
+    </form>
+</div>
 {% endblock %}

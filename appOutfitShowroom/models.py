@@ -24,3 +24,13 @@ class Outfit(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class Comentario(models.Model):
+    outfit = models.ForeignKey(Outfit, on_delete=models.CASCADE, related_name="comentarios")
+    nombre = models.CharField(max_length=100)  # Nombre de quien comenta
+    puntuacion = models.PositiveSmallIntegerField()  # Puntuación de 1 a 5
+    texto = models.TextField(blank=True, null=True)  # Texto opcional del comentario
+    fecha = models.DateTimeField(auto_now_add=True)  # Fecha del comentario
+
+    def __str__(self):
+        return f"{self.nombre} - {self.puntuacion} estrellas"

@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-<html lang="es">
+
+<!DOCTYPE html>
+<html lang="{% get_current_language as LANGUAGE_CODE %}">
 <head>
     <meta charset="UTF-8">
     <title>Outfit Showroom - Detalles</title>
@@ -9,6 +10,51 @@
     <link rel="stylesheet" href="{% static 'layout/styles/layout.css' %}">
 </head>
 <body>
+    <div class="wrapper row0">
+        <div id="topbar" class="hoc clear">
+          <div class="fl_left"> 
+            <!-- ################################################################################################ -->
+            <ul class="nospace">
+              <li><i class="fas fa-phone rgtspace-5"></i> +34 671108588</li>
+              <li><i class="far fa-envelope rgtspace-5"></i> soporte@outfitshowroom.com</li>
+            </ul>
+            <!-- ################################################################################################ -->
+          </div>
+          <div class="fl_right"> 
+            <!-- ################################################################################################ -->
+            <ul class="nospace">
+                <li>
+                    <form method="post" action="{% url 'set_language' %}">
+                      {% csrf_token %}
+                      <input type="hidden" name="language" value="en">
+                      <button type="submit" class="btn-language english-btn">English</button>
+                    </form>
+                  </li>
+                  <li>
+                    <form method="post" action="{% url 'set_language' %}">
+                      {% csrf_token %}
+                      <input type="hidden" name="language" value="es">
+                      <button type="submit" class="btn-language spanish-btn">Español</button>
+                    </form>  
+                  </li>
+              <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+              <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+              <li id="searchform">
+                <div>
+                  <form action="#" method="post">
+                    <fieldset>
+                      <legend>Quick Search:</legend>
+                      <input type="text" placeholder="Enter search term&hellip;">
+                      <button type="submit"><i class="fas fa-search"></i></button>
+                    </fieldset>
+                  </form>
+                </div>
+              </li>
+            </ul>
+            <!-- ################################################################################################ -->
+          </div>
+        </div>
+      </div>
     <header>
         <h1>Outfit Showroom</h1>
         <nav>
