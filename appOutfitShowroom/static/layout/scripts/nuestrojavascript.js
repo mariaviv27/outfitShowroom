@@ -21,3 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Función para oscurecer la imagen y mostrar un overlay al pasar el ratón
+document.addEventListener("DOMContentLoaded", function () {
+    const photo = document.getElementById("photo");
+    const overlay = document.getElementById("overlay");
+
+    if (photo && overlay) {
+        photo.addEventListener("mouseover", function () {
+            // Oscurece la imagen al pasar el ratón
+            photo.style.filter = "brightness(50%)";
+            // Muestra el overlay
+            overlay.style.display = "block";
+        });
+
+        photo.addEventListener("mouseout", function () {
+            // Restaura el brillo de la imagen
+            photo.style.filter = "brightness(100%)";
+            // Oculta el overlay
+            overlay.style.display = "none";
+        });
+    }
+});

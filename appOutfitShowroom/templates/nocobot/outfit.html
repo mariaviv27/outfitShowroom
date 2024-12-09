@@ -12,7 +12,13 @@
 <p><strong>{% trans "Estilo:" %}</strong> 
     {{ outfit.estilo }}
 </p>
-<img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}">
+
+<div class="photo-container">
+    <img src="{{ outfit.foto }}" alt="{{ outfit.nombre }}" id="photo" class="photo">
+    <div id="overlay" class="overlay" style="display: none;">
+        <p>OutfitShowRoom. Nuestras fotos tienen derechos de autor. Si te gustan pídenoslas y te las pasaremos.</p>
+    </div>
+</div>
 
 <!-- Sección de comentarios con scroll -->
 <div class="comments-section">
