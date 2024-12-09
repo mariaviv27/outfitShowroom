@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>{{ estilo.nombre }}</h1>
-<p><strong>{% trans "Definición:" %}</strong> {{ estilo.definición }}</p>
+<p><strong>{% trans "Definición:" %}</strong> {{ estilo.descripcion }}</p>
 <h2>{% trans "Outfits asociados" %}</h2>
 <ul>
     {% for outfit in outfits %}
